@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .button {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Portal</h1>
+    <p>Please select your role:</p>
+
+    <button class="button" onclick="window.location.href='student.html'">Student</button>
+    <button class="button" onclick="window.location.href='faculty.html'">Faculty</button>
+    <button class="button" onclick="window.location.href='admin.html'">Admin</button>
+
+</body>
+</html>

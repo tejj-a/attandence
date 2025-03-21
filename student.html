@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        .input-field {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Login</h1>
+    <p>Please enter your details:</p>
+
+    <div class="container">
+        <form id="loginForm">
+            <label for="regNo">Registration Number</label>
+            <input type="text" id="regNo" name="regNo" class="input-field" placeholder="Enter your Registration Number" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="input-field" placeholder="Enter your password" required>
+
+            <button type="submit" class="button">Login</button>
+        </form>
+    </div>
+
+    <script>
+       document.getElementById("loginForm").addEventListener("submit", function(event){
+    event.preventDefault();  // Prevent default form submission
+
+    // Perform validation if necessary
+    var regNo = document.getElementById("regNo").value;
+    var password = document.getElementById("password").value;
+
+    if (regNo && password) {
+        // Redirect to student_dashboard.html after successful login
+        window.location.href = "student_dashboard.html";
+    } else {
+        alert("Please enter both Registration Number and Password.");
+    }
+});
+
+    </script>
+
+</body>
+</html>
